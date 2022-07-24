@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+
+.header {
+  height: 60px;
+  width: 100%;
+  padding: 0 20px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $dark-secondary;
+}
+
+.logo {
+  width: 150px;
+}
+
+.nav {
+  @include centered-body-width;
+
+  display: flex;
+  align-items: center;
+  ul {
+    margin: 0 0 0 auto;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    list-style-type: none;
+    color: $primary;
+  }
+}

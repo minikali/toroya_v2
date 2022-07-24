@@ -1,0 +1,23 @@
+/* make the customizations */
+
+/* Colors */
+$primary: #dfb66b;
+$primary-light: #ffedcb;
+
+$dark-primary: #222222;
+$dark-secondary: #444444;
+
+/* Others */
+$body-width: 1200px;
+
+/* Mixins*/
+@mixin centered-body-width {
+  width: 100%;
+  max-width: $body-width;
+  margin: 0 auto;
+}
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/utilities';

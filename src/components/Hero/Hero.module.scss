@@ -1,0 +1,15 @@
+@import '@styles/variables.scss';
+
+.heroImg {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+
+  background-image: url('../../assets/img/hero-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heroContent {
+}
