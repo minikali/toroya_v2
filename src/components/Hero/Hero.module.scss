@@ -1,9 +1,9 @@
 @import '@styles/variables.scss';
 
-.heroImg {
+.img {
   position: relative;
   width: 100%;
-  height: calc(100vh - 60px);
+  height: 100vh;
 
   background-image: url('../../assets/img/hero-bg.png');
   background-position: center;
@@ -11,5 +11,14 @@
   background-size: cover;
 }
 
-.heroContent {
+.content {
+  @include centered-body-width;
+  padding-top: 60px;
+  h1 {
+    color: $primary-light;
+  }
+}
+
+.titleWrap {
+  margin-top: 400px;
 }

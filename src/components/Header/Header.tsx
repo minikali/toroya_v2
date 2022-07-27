@@ -1,22 +1,16 @@
-import useScrollPosition from '@hooks/useScrollPosition';
 import useTopPosition from '@hooks/useTopPosition';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
 import Logo from '@assets/img/logo_land.png';
 import { Button } from 'react-bootstrap';
+import cn from 'classnames';
 import s from './Header.module.scss';
 
 const Header = () => {
   const isTopPosition = useTopPosition();
 
-  useEffect(() => {
-    console.log('y', isTopPosition);
-  }, [isTopPosition]);
-
-  console.log('rendering');
-
   return (
-    <header className={s.header}>
+    <header className={cn(s.header, { [s.transparent]: isTopPosition })}>
       <nav className={s.nav}>
         <div className={s.logo}>
           <Image src={Logo} alt='logo' />
