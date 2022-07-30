@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.burger {
+  width: 35px;
+  height: 24px;
+  position: relative;
+  > div {
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background-color: $primary;
+    border-radius: 2px;
+  }
+  > div:nth-child(1) {
+    transform-origin: left center;
+    top: 0px;
+    transition: linear 0.2s transform;
+  }
+  > div:nth-child(2) {
+    top: 10px;
+    transition: linear 0.2s height;
+  }
+  > div:nth-child(3) {
+    transform-origin: left center;
+    top: 20px;
+    transition: linear 0.2s transform;
+  }
+}
+
+.burger.active {
+  > div:nth-child(1) {
+    transform: rotate(35deg);
+    transition: linear 0.2s transform;
+  }
+  > div:nth-child(2) {
+    height: 0;
+    transition: linear 0.2s height;
+  }
+  > div:nth-child(3) {
+    transform: rotate(-35deg);
+    transition: linear 0.2s transform;
+  }
+}
