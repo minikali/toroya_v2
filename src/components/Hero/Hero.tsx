@@ -1,6 +1,5 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import s from './Hero.module.scss';
+import Button from "react-bootstrap/Button";
+import s from "./Hero.module.scss";
 
 const Hero = () => {
   return (
@@ -12,7 +11,9 @@ const Hero = () => {
             <br />
             rien que pour vous
           </h1>
-          <Button variant='outline-primary'>Voir la carte</Button>
+          <Button className={s.btn} variant="outline-primary">
+            Voir la carte
+          </Button>
         </div>
       </div>
     </div>

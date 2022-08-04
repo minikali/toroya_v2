@@ -1,21 +1,34 @@
-import React, { useState, useRef } from "react";
 import Burger from "@components/Burger";
-import Button from "react-bootstrap/Button";
-import cn from "classnames";
-import s from "./Navigation.module.scss";
 import useOutsideClick from "@hooks/useOutsideClick";
+import cn from "classnames";
+import { useRef, useState } from "react";
+import Button from "react-bootstrap/Button";
+import s from "./Navigation.module.scss";
 
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navRef = useRef<HTMLUListElement>(null);
-  const navRef = useRef<HTMLUListElement>(null);
+  const burgerRef = useRef<HTMLDivElement>(null);
+
   useOutsideClick(navRef, (event) => {
-    setShowMenu(false);
+    // Do not trigger on burger button
+    // or it will trigger twice
+    if (
+      burgerRef &&
+      burgerRef.current &&
+      !burgerRef.current.contains(event.target as Node)
+    )
+      setShowMenu(false);
   });
 
   return (
     <>
-      <Burger active={showMenu} setActive={setShowMenu} />
+      <Burger
+        ref={burgerRef}
+        className={s.burger}
+        active={showMenu}
+        setActive={setShowMenu}
+      />
       <ul ref={navRef} className={cn(s.navigation, { [s.active]: showMenu })}>
         <li>Accueil</li>
         <li>Menu</li>

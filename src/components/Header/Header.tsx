@@ -1,10 +1,9 @@
-import useTopPosition from "@hooks/useTopPosition";
-import Image from "next/image";
-import React from "react";
 import Logo from "@assets/img/logo_land.png";
-import cn from "classnames";
-import s from "./Header.module.scss";
 import Navigation from "@components/Navigation";
+import useTopPosition from "@hooks/useTopPosition";
+import cn from "classnames";
+import Image from "next/image";
+import s from "./Header.module.scss";
 
 const Header = () => {
   const isTopPosition = useTopPosition();
@@ -15,8 +14,8 @@ const Header = () => {
         <div className={s.logo}>
           <Image src={Logo} alt="logo" />
         </div>
+        <Navigation />
       </nav>
-      <Navigation />
     </header>
   );
 };

@@ -1,0 +1,70 @@
+@import "@styles/variables.scss";
+
+.sushiOnTable {
+  padding: 0;
+  .img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.presentation {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.partner {
+  padding: 40px 0;
+  background-color: $dark-primary;
+  .title {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.partnerWrapper {
+  margin: 0;
+  gap: 50px;
+  .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.informations {
+  ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.informations {
+  padding: 40px 0;
+  background-color: $dark-secondary;
+  .title {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.gallery {
+  .col {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+  }
+
+  .col .img {
+    width: 100%;
+    min-height: 100%;
+  }
+}
