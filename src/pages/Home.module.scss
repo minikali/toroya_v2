@@ -1,4 +1,4 @@
-@import "@styles/variables.scss";
+@import '@styles/variables.scss';
 
 .sushiOnTable {
   padding: 0;
@@ -66,5 +66,25 @@
   .col .img {
     width: 100%;
     min-height: 100%;
+  }
+}
+
+.social {
+  padding: 40px 0;
+  background-color: $dark-primary;
+  .title {
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .col {
+    display: flex;
+    align-items: center;
+    &:nth-child(1) {
+      justify-content: flex-end;
+    }
+    &:nth-child(2) {
+      justify-content: flex-start;
+    }
   }
 }
