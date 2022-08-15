@@ -1,0 +1,12 @@
+@import "@styles/variables.scss";
+
+.row {
+  margin: 0;
+  gap: 50px;
+}
+.col {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

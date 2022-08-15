@@ -1,30 +1,28 @@
-import Gallery1 from '@assets/img/gallery/gallery_1.jpg';
-import Gallery10 from '@assets/img/gallery/gallery_10.jpg';
-import Gallery11 from '@assets/img/gallery/gallery_11.jpg';
-import Gallery12 from '@assets/img/gallery/gallery_12.jpg';
-import Gallery2 from '@assets/img/gallery/gallery_2.jpg';
-import Gallery3 from '@assets/img/gallery/gallery_3.jpg';
-import Gallery4 from '@assets/img/gallery/gallery_4.jpg';
-import Gallery5 from '@assets/img/gallery/gallery_5.jpg';
-import Gallery6 from '@assets/img/gallery/gallery_6.jpg';
-import Gallery7 from '@assets/img/gallery/gallery_7.jpg';
-import Gallery8 from '@assets/img/gallery/gallery_8.jpg';
-import Gallery9 from '@assets/img/gallery/gallery_9.jpg';
-import SushisOnTable from '@assets/img/sushis_on_table.png';
-import ClockIcon from '@assets/svg/clock_icon.svg';
-import DeliverooIcon from '@assets/svg/deliveroo.svg';
-import FacebookIcon from '@assets/svg/facebook_icon.svg';
-import InstagramIcon from '@assets/svg/instagram_icon.svg';
-import JustEatIcon from '@assets/svg/just_eat.svg';
-import MarkerIcon from '@assets/svg/marker_icon.svg';
-import PhoneIcon from '@assets/svg/phone_icon.svg';
-import UberEatIcon from '@assets/svg/uber_eat.svg';
-import Hero from '@components/Hero';
-import Layout from '@layouts/Layout';
-import type { NextPage } from 'next';
-import Image from 'next/future/image';
-import { Col, Container, Row } from 'react-bootstrap';
-import s from './Home.module.scss';
+import Gallery1 from "@assets/img/gallery/gallery_1.jpg";
+import Gallery10 from "@assets/img/gallery/gallery_10.jpg";
+import Gallery11 from "@assets/img/gallery/gallery_11.jpg";
+import Gallery12 from "@assets/img/gallery/gallery_12.jpg";
+import Gallery2 from "@assets/img/gallery/gallery_2.jpg";
+import Gallery3 from "@assets/img/gallery/gallery_3.jpg";
+import Gallery4 from "@assets/img/gallery/gallery_4.jpg";
+import Gallery5 from "@assets/img/gallery/gallery_5.jpg";
+import Gallery6 from "@assets/img/gallery/gallery_6.jpg";
+import Gallery7 from "@assets/img/gallery/gallery_7.jpg";
+import Gallery8 from "@assets/img/gallery/gallery_8.jpg";
+import Gallery9 from "@assets/img/gallery/gallery_9.jpg";
+import SushisOnTable from "@assets/img/sushis_on_table.png";
+import ClockIcon from "@assets/svg/clock_icon.svg";
+import FacebookIcon from "@assets/svg/facebook_icon.svg";
+import InstagramIcon from "@assets/svg/instagram_icon.svg";
+import MarkerIcon from "@assets/svg/marker_icon.svg";
+import PhoneIcon from "@assets/svg/phone_icon.svg";
+import Hero from "@components/Hero";
+import Partner from "@components/Partner";
+import Layout from "@layouts/Layout";
+import type { NextPage } from "next";
+import Image from "next/future/image";
+import { Col, Container, Row } from "react-bootstrap";
+import s from "./Home.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -36,7 +34,7 @@ const Home: NextPage = () => {
             <Image
               className={s.img}
               src={SushisOnTable}
-              alt='Sushis on table'
+              alt="Sushis on table"
             />
           </Col>
           <Col xs={12} md={6}>
@@ -56,23 +54,13 @@ const Home: NextPage = () => {
       </Container>
       <Container className={s.partner}>
         <h2 className={s.title}>Faite vous livrez avec nos partenaires</h2>
-        <Row className={s.partnerWrapper}>
-          <Col className={s.col} xs={12} md={4}>
-            <Image src={DeliverooIcon} alt='Deliveroo Icon' />
-          </Col>
-          <Col className={s.col} xs={12} md={4}>
-            <Image src={UberEatIcon} alt='Uber Eat iIcon' />
-          </Col>
-          <Col className={s.col} xs={12} md={4}>
-            <Image src={JustEatIcon} alt='Just Eat Icon' />
-          </Col>
-        </Row>
+        <Partner />
       </Container>
       <Container className={s.informations}>
         <h2 className={s.title}>Sur place et à emporter</h2>
         <ul>
           <li>
-            <Image src={ClockIcon} alt='Clock icon' />
+            <Image src={ClockIcon} alt="Clock icon" />
             <p>
               <span>Ouvert 7/7j</span>
               <br />
@@ -82,7 +70,7 @@ const Home: NextPage = () => {
             </p>
           </li>
           <li>
-            <Image src={MarkerIcon} alt='Marker Icon' />
+            <Image src={MarkerIcon} alt="Marker Icon" />
             <p>
               <span>42 Rue Pargaminière</span>
               <br />
@@ -90,7 +78,7 @@ const Home: NextPage = () => {
             </p>
           </li>
           <li>
-            <Image src={PhoneIcon} alt='Phone icon' />
+            <Image src={PhoneIcon} alt="Phone icon" />
             <p>
               <span>
                 Réservation
@@ -98,7 +86,7 @@ const Home: NextPage = () => {
                 et vente à emporter
               </span>
               <br />
-              <a href='tel:0561236792'>05 61 23 67 92</a>
+              <a href="tel:0561236792">05 61 23 67 92</a>
             </p>
           </li>
         </ul>
@@ -106,40 +94,40 @@ const Home: NextPage = () => {
       <Container className={s.gallery}>
         <Row>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery1} alt='Gallery1' />
+            <Image className={s.img} src={Gallery1} alt="Gallery1" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery2} alt='Gallery2' />
+            <Image className={s.img} src={Gallery2} alt="Gallery2" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery3} alt='Gallery3' />
+            <Image className={s.img} src={Gallery3} alt="Gallery3" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery4} alt='Gallery4' />
+            <Image className={s.img} src={Gallery4} alt="Gallery4" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery5} alt='Gallery5' />
+            <Image className={s.img} src={Gallery5} alt="Gallery5" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery6} alt='Gallery6' />
+            <Image className={s.img} src={Gallery6} alt="Gallery6" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery7} alt='Gallery7' />
+            <Image className={s.img} src={Gallery7} alt="Gallery7" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery8} alt='Gallery8' />
+            <Image className={s.img} src={Gallery8} alt="Gallery8" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery9} alt='Gallery9' />
+            <Image className={s.img} src={Gallery9} alt="Gallery9" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery10} alt='Gallery10' />
+            <Image className={s.img} src={Gallery10} alt="Gallery10" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery11} alt='Gallery11' />
+            <Image className={s.img} src={Gallery11} alt="Gallery11" />
           </Col>
           <Col className={s.col} xs={6} md={3} lg={2}>
-            <Image className={s.img} src={Gallery12} alt='Gallery12' />
+            <Image className={s.img} src={Gallery12} alt="Gallery12" />
           </Col>
         </Row>
       </Container>
@@ -147,10 +135,10 @@ const Home: NextPage = () => {
         <h2 className={s.title}>Suivez nous sur les réseaux</h2>
         <Row>
           <Col className={s.col}>
-            <Image src={FacebookIcon} alt='Facebook icon' />
+            <Image src={FacebookIcon} alt="Facebook icon" />
           </Col>
           <Col className={s.col}>
-            <Image src={InstagramIcon} alt='Instagram icon' />
+            <Image src={InstagramIcon} alt="Instagram icon" />
           </Col>
         </Row>
       </Container>
